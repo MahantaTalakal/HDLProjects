@@ -61,4 +61,4 @@ always_ff @(posedge clk1) begin
 endmodule
 
 
-***uncomment the code block with clkk1 and clkk2 for behavioural simulation, and uncomment the code block with clk1 and clk2 for FPGA implementation'
+//***uncomment the code block with clkk1 and clkk2 for behavioural simulation, and uncomment the code block with clk1 and clk2 for FPGA implementation'
