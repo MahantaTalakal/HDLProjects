@@ -1,0 +1,87 @@
+module PRNG_tb();
+  logic A,clkk1, clkk2,clk;
+  logic [11:0] y, counter1, counter2;
+
+  PRNG dut (
+    A,clk,clkk1,clkk2,y,counter1,counter2 // Assuming a clock signal is needed, add it to the module instantiation
+   
+  );
+
+  initial begin
+    clkk1 = 1;
+    forever #18 clkk1 = ~clkk1;
+  end
+  initial begin
+    clkk2 = 1;
+    forever #7 clkk2 = ~clkk2;
+  end
+
+  initial begin
+  y=8'b0;
+    A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50 A = 1'b0;
+    #50 A = 1'b1;
+    #50;
+    $finish;
+  end
+endmodule
